@@ -1,0 +1,31 @@
+/* important terminal commands */
+
+git add .
+git commit -m 'First commit'
+git push origin master
+git config --global user.email "shakalya195@gmai.com"
+git config --global user.name "shakalya"
+
+sudo ssh -i /home/cbl1023/Downloads/bagant_web.pem ubuntu@13.126.236.179
+
+sudo git clone https://shakalya@bitbucket.org/codebrew_web/bagant-frontend.git --branch Shakalya
+
+sudo rm *
+sudo rm -r dist
+sudo rm -r assets
+sudo wget /dist.zip
+sudo unzip dist.zip
+sudo mv dist/* .
+
+scp -i /home/cbl1023/Downloads/bagant_web.pem /var/www/html/dump/bagant/dist.zip ubuntu@13.126.236.179:/var/www/html/temp
+
+sudo unzip temp/dist.zip
+sudo mv temp/dist/* .
+
+sudo scp -i /home/cbl-linux/Downloads/RequestOnlineDevelopement.pem /home/cbl-linux/Downloads/RequestHTML.zip ubuntu@63.33.166.92:/var/www/html/template
+
+echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
+
+sudo su
+echo "blacklist peaq_wmi" >> /etc/modprobe.d/50-blacklist.conf
+RESTART
